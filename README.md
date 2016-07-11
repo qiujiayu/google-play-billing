@@ -1,4 +1,4 @@
-#Google play 支付流程（）
+#Google play 支付流程（App内购）
 
 参考代码：android-sdk\extras\google\play_billing\samples\TrivialDrive\src\com\example\android\trivialdrivesample\util\IabHelper.java
 
