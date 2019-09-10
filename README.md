@@ -1,15 +1,15 @@
-#Google play 支付流程（App内购）
+# Google play 支付流程（App内购）
 
 参考代码：android-sdk\extras\google\play_billing\samples\TrivialDrive\src\com\example\android\trivialdrivesample\util\IabHelper.java
 
-###Google play支付的丢单原因：
+### Google play支付的丢单原因：
 
 丢单因为主要是因为支付操作都是在客户端完成的，非常容易受到网络等因素的影响，造成互相通信失败。比如：用户确认支付后，把请求提交给google play,可能因为网络不好造成，客户端没有接收到支付成功能消息（但有可能已经支付成功了，只是没收到支付结果而已）；还有客户端把支付结果通知给服务器时，也有可能因丢包等问题造成通知失败。
 
-###支付流程如下图所示：
+### 支付流程如下图所示：
 ![Alt 支付流程](flow.png "支付流程")
 
-###流程说明：
+### 流程说明：
 
 1. 查询未确认消耗的商品（参考：IabHelper.queryPurchases()方法）；
 2. 获得未确认消耗的商品信息；
